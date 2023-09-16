@@ -1,0 +1,67 @@
+﻿@model MyBoardGamesMVC.Model.MergedGame
+
+@{
+    ViewData["Title"] = "RandomGame";
+}
+<head>
+    <style>
+        #loader {
+            display: none;
+        }
+    </style>
+</head>
+
+<div class="forsidecover">
+</div>
+<div class="forsidecontent">
+    <div class="container-fluid">
+        @if (Model.Game != null && Model.GameVersion != null) {
+            <div class="box470" style="width: 300px; height: auto;">
+                <div class="box470header" style="height: 55px;">
+                    <p class="box470headertext">@Model.Game.GameName</p>
+                </div>
+                <div class="box470bg" style="width: 300px; height: auto;">
+                    <p class="box470bgtext" style="font-size: 18px; margin-bottom: 10px;">@Model.GameVersion.VersionName</p>
+                    @if (Model.GameCharacter != null) {
+                        @foreach (var character in Model.GameCharacter) {
+                            <p class="box470bgtext" style="font-size: 14px; margin-bottom: 0px;">&#x2022; @character.CharacterName</p>
+                        }
+                    }
+                </div>
+            </div>
+        } else {
+            <div class="box470" style="width: 300px; height: auto;">
+                <div class="box470header" style="height: 55px;">
+                    <p class="box470headertext">Intet fundet</p>
+                </div>
+                <div class="box470bg" style="width: 300px; height: auto;">
+                    <p class="box470bgtext" style="font-size: 18px; margin-bottom: 10px;">Intet fundet</p>
+                </div>
+            </div>
+        }
+        <div style="width: 130px; text-align: center; margin-left: auto; margin: auto; margin-top: 70px;">
+            <button id="toggleButton" onclick="refreshPage()" class="refreshgamebutton">Find et andet</button>
+        </div>
+        <div id="loader" class="lds-ellipsis" style="margin-left: auto; margin-right: auto; margin-top: -100px; transform: scale(0.5);"><div></div><div></div><div></div></div>
+    </div>
+</div>
+
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+
+    // Get references to the button and div elements
+    const toggleButton = document.getElementById('toggleButton');
+    const loader = document.getElementById('loader');
+
+    // Add a click event listener to the button
+    toggleButton.addEventListener('click', function () {
+        // Toggle the display style of the div
+        if (loader.style.display === 'none' || loader.style.display === '') {
+            loader.style.display = 'block';
+        } else {
+            loader.style.display = 'none';
+        }
+    });
+</script>

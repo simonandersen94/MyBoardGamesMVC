@@ -1,0 +1,412 @@
+html {
+
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.menubar {
+    width: 100%;
+    height: 62px;
+    position: fixed;
+    z-index: 3999;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.logo {
+    width: 150px;
+    height: 35px;
+    margin-top: 14px;
+    margin-left: 40px;
+    opacity: 0.8;
+}
+
+.menubox {
+    font-family: Bahnschrift;
+    font-size: 15px;
+    display: inline-block;
+    width: auto;
+    height: 30px;
+    margin-top: 22px;
+    margin-right: 50px;
+    float: right;
+    color: #fff;
+}
+
+.menuarrow {
+    transform: scale(0.3);
+    margin-right: -8px;
+    margin-top: -3px;
+    opacity: 0.7;
+}
+
+/* ------ FORSIDE ------*/
+
+.forsidecover {
+    /*background-image: url('../assets/BackgroundCover.png');*/
+    background-image: url('../assets/kevin-mueller3.png');
+    background-size: cover;
+    background-repeat: round;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.forsidecontent {
+    /*z-index: 200;*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1050px;
+    padding-top: 70px;
+}
+
+.box470headertext {
+    font-family: Bahnschrift;
+    font-weight: 600;
+    /*color: #5a525b;*/
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.box470headertextsmall {
+    font-family: Bahnschrift;
+    font-weight: 400;
+    /*color: rgba(0, 0, 0, 0.5);*/
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.box470bgtext {
+    font-family: Bahnschrift;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+}
+
+.box470header {
+    width: 100%;
+    height: 70px;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px 20px 0px 0px;
+    transition: 0.1s ease-in-out;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: none;
+    backdrop-filter: blur(5px);
+}
+
+.box470header:hover .arrowimage {
+    opacity: 0.6;
+}
+
+.box470header:active .arrowimage {
+    opacity: 0.6;
+    transform: scale(0.8);
+}
+
+.arrowimage {
+    margin-right: 20px;
+    float: right;
+    margin-top: -32px;
+    opacity: 0.4;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/arrowforwardwhite.png');
+}
+
+.box470 {
+    height: 250px;
+    width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    transition: .15s ease-in-out;
+}
+
+.box470:hover {
+    transform: scale(1.014);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 7px;
+}
+
+.box470bg {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 470px;
+    height: 180px;
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px;
+}
+
+.findgametext {
+    font-family: Bahnschrift;
+    font-size: 16px;
+    /*color: #6f656f;*/
+    color: #242937;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.findgameinput {
+    width: 80px;
+    height: 35px;
+    font-family: Bahnschrift;
+    font-size: 14px;
+    color: rgba(40, 66, 98, 1);
+    border: none;
+    border: 2px solid rgba(40, 66, 98, 0.6);
+    background-color: #dae3ec;
+    outline: none;
+    border-radius: 8px 8px 8px 8px;
+    text-align: center;
+    padding-right: 2px;
+    margin-right: 5px;
+}
+
+.findgameinput:focus {
+    border: 2px solid rgba(40, 66, 98, 0.9);
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.findgamebutton {
+    width: 80px;
+    height: 35px;
+    font-family: Bahnschrift;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px 8px 8px 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.findgamebutton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.listofgames {
+    width: 100%;
+    height: 30px;
+    background-color: #ededed;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    padding-top: 7px;
+    cursor: default;
+}
+
+.listofgames:hover {
+    opacity: 0.85;
+}
+
+.gitliqr {
+    transform: scale(0.2);
+    margin-top: -265px;
+    margin-left: 100px;
+}
+
+.refreshgamebutton {
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: Bahnschrift;
+    font-size: 16px;
+    color: #3e3e3e;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.refreshgamebutton:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* ------ FOOTER ------ */
+
+.footerbox {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+}
+
+/* ------ MEDIA ------ */
+
+@media (max-width: 600px) {
+    .box470 {
+        width: 330px;
+    }
+    .logo {
+        margin-left: 5px;
+    }
+    .menubutton {
+        margin-right: 12px;
+    }
+    .box470header {
+        width: 100%;
+    }
+    .box470bg {
+        width: 330px;
+        height: 180px;
+    }
+    .footerbox {
+        display: none;
+    }
+    .gitliqr {
+        display: none;
+    }
+    .menubox {
+        margin-right: 10px;
+    }
+}
+
+/* ----- ALLE SPIL SIDE ----- */
+
+.allgamescontentcard {
+    width: 355px;
+    padding: 15px 5px 15px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 4px, rgba(0, 0, 0, 0.0) 0px 2px 4px -3px, rgba(0, 0, 0, 0.15) 0px -4px 0px inset;
+    border-radius: 12px;
+    border-top: 2px solid #c8ddc7;
+    border-right: 2px solid #c8ddc7;
+    border-left: 2px solid #c8ddc7;
+    border-bottom: 2px solid #bbceba;
+    opacity: 85%;
+}
+
+.allgamescontentcardheadtext {
+    font-family: Bahnschrift;
+    font-size: 16px;
+    color: #337e2d;
+    letter-spacing: 0.3px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+.allgamescontentcardversiontext {
+    font-family: Bahnschrift;
+    font-size: 14px;
+    color: #454545;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.allgamescontentcardplayerstext {
+    font-family: Bahnschrift;
+    font-size: 12px;
+    color: #7f7f7f;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin-top: -18px;
+    margin-bottom: 20px;
+}
+
+.allgamescontentcardtextline {
+    width: 50%;
+    height: 1px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d2cdda;
+}
+
+/* ------------- LOADING ---------------*/
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}

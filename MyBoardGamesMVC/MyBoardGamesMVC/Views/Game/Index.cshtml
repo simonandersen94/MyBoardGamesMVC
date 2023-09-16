@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MyBoardGamesMVC.Model.GameVersion>
+@using MyBoardGamesMVC.Model;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="forsidecover">
+</div>
+<div class="forsidecontent">
+    <div class="container-fluid">
+        <div class="row" style="padding-bottom: 100px;">
+            @foreach (var game in Model) {
+                <div class="col">
+                    <div class="box470" style="width: 300px; height: 150px;">
+                        <a href="">
+                            <div class="box470header" style="height: 55px;">
+                                <p class="box470headertext">@game.Game.GameName</p>
+                            </div>
+                        </a>
+                        <div class="box470bg" style="width: 300px; height: 95px;">
+                            <p class="box470bgtext" style="font-size: 18px; margin-bottom: 0px;">@game.VersionName</p>
+                            @if (game.MinNoOfPlayers != game.MaxNoOfPlayers && game.MinNoOfPlayers > 1) {
+                                <p class="box470bgtext" style="font-size: 12px;">( @game.MinNoOfPlayers - @game.MaxNoOfPlayers spillere )</p>
+                            } else if (game.MinNoOfPlayers == game.MaxNoOfPlayers && game.MinNoOfPlayers > 1) {
+                                <p class="box470bgtext" style="font-size: 12px;">( @game.MinNoOfPlayers spillere )</p>
+                            } else {
+                                <p class="box470bgtext" style="font-size: 12px;">( @game.MinNoOfPlayers spiller )</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+﻿@{
+    int amountOfGames = (int)ViewData["amountOfGames"];
+}
+
+@{
+    ViewData["Home"] = "";
+}
+
+<head></head>
+
+<div class="forsidecover">
+    
+</div>
+<div class="forsidecontent">
+    <div class="container-fluid">
+        <div class="row" style="padding-bottom: 100px;">
+            <div class="col">
+                <div class="box470">
+                    <div class="box470header">
+                        <p class="box470headertext">Find spil</p>
+                        <p class="box470headertextsmall">&#x2022 Tilfældigt spil valgt ud fra antal spillere</p>
+                        </div>
+                    <div class="box470bg"><br />
+                        <p class="findgametext">Antal spillere:</p>
+                        <div style="text-align: center;">
+                            <form autocomplete="off" action="/game/randomgame?" method="get" onsubmit="return validateForm()">
+                                <input type="text" placeholder=". . ." id="noOfPlayers" name="no" required maxlength="2" class="findgameinput">
+                                <input class="findgamebutton" value="Find spil" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box470">
+                    <a asp-area="" asp-controller="Game" asp-action="Index">
+                        <div class="box470header">
+                        <p class="box470headertext">Alle spil</p> <div class="arrowimage"></div>
+                            <p class="box470headertextsmall">&#x2022 Se listen over alle @amountOfGames spil</p>
+                        </div></a>
+                    <div class="box470bg">
+                        <div class="listofgames"><p class="box470bgtext">VILLAINOUS</p></div>
+                        <div class="listofgames"><p class="box470bgtext">UNMATCHED</p></div>
+                        <div class="listofgames"><p class="box470bgtext">EXPLODING KITTENS</p></div>
+                            <div style="text-align: center; pointer-events: none;"><p class="box470bgtext">&#x2022 &#x2022 &#x2022</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="opacity: 0.3">
+                <div class="box470">
+                    <div class="box470header">
+                        <p class="box470headertext" style="pointer-events: none;">Placeholder</p>
+                        <p class="box470headertextsmall" style="pointer-events: none;">&#x2022 Placeholder</p>
+                    </div>
+                    <div class="box470bg"></div>
+                </div>
+            </div>
+            <div class="col" style="opacity: 0.3">
+                <div class="box470">
+                    <div class="box470header">
+                        <p class="box470headertext" style="pointer-events: none;">Placeholder</p>
+                        <p class="box470headertextsmall" style="pointer-events: none;">&#x2022 Placeholder</p>
+                    </div>
+                    <div class="box470bg"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box470">
+                    <a href="https://github.com/simonandersen94" target="_blank">
+                    <div class="box470header">
+                        <p class="box470headertext" style="pointer-events: none;">GitHub</p> <div class="arrowimage"></div>
+                        <p class="box470headertextsmall" style="pointer-events: none;">&#x2022 GitHub repository</p>
+                    </div></a>
+                    <div class="box470bg">
+                        <img src="~/assets/githublogo.png" style="transform: scale(0.6); margin-left: -45px;"/>
+                        <p class="box470bgtext" style="margin-left: 20px;">github.com/simonandersen94</p>
+                        <img src="~/assets/gitqr.png" class="gitliqr" />
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box470">
+                    <a href="https://www.linkedin.com/in/simonandersen94/" target="_blank">
+                    <div class="box470header">
+                        <p class="box470headertext" style="pointer-events: none;">LinkedIn</p> <div class="arrowimage"></div>
+                        <p class="box470headertextsmall" style="pointer-events: none;">&#x2022 Find mig på LinkedIn</p>
+                    </div></a>
+                    <div class="box470bg">
+                        <img src="~/assets/linkedinlogo.png" style="transform: scale(0.6); margin-left: -40px;" />
+                            <p class="box470bgtext" style="margin-left: 20px;">linkedin.com/in/simonandersen94</p>
+                        <img src="~/assets/liqr.png" class="gitliqr" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script type="text/javascript">
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const parameterValue = urlParams.get('');
+
+        function validateForm() {
+            var inputElement = document.getElementById("noOfPlayers");
+            var inputValue = parseInt(inputElement.value);
+
+            if (isNaN(inputValue) || inputValue <= 0) {
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+</script>
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Home"] My Board Games</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyBoardGamesMVC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="menubar">
+            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/assets/logowhite.png" class="logo" /></a>
+            <div class="menubox">
+                <img src="~/assets/arrowforwardwhite.png" class="menuarrow"/>
+                <a asp-area="" asp-controller="Home" asp-action="Index">HJEM</a> &nbsp;
+                <img src="~/assets/arrowforwardwhite.png" class="menuarrow" />
+                <a asp-area="" asp-controller="Game" asp-action="Index">SPIL</a>
+            </div>
+        </div>
+    </header>
+        <main>
+            @RenderBody()
+        </main>
+    <footer>
+       @*  <div class="footerbox">
+            
+        </div> *@
+    </footer>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Styles", false)
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
